@@ -1,0 +1,49 @@
+/*变量声明*/
+$bgImgUrl: '../img/'; //background:url 公共路径
+$orange: #f66d44; //橙色
+$fontColor: #798ba1;  //灰色
+$borderColor: #ddd; //边框颜色
+$bgColor: #f7f7f6; //灰色背景
+
+/*公共样式*/
+.clearfix:before,.clearfix:after{
+    content: '\0020';
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix{
+    zoom: 1;
+}
+.clearfix:after{
+    clear: both;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+/*公共按钮*/
+.btn{
+    box-shadow: 0 3px 7px #f66d44;
+    border: 0;
+    border-radius: rem(90);
+    font-size: rem(30);
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(90deg, #f66d44, #f89843);
+}
+
+/*登录Banner*/
+.login-banner {
+    width: rem(750);
+    height: rem(576);
+    background: url(#{$bgImgUrl}center/bg-login@2x.png);
+    background-size: cover;
+    @media screen and (min-width: 751px) {
+      background: url(#{$bgImgUrl}center/bg-login@3x.png);
+      background-size: contain;
+    }
+}

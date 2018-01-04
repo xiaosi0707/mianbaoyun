@@ -1,0 +1,576 @@
+/*首页*/
+.index{
+    position: relative;
+    z-index: 100;
+    @include background( #f6f6f6, '', '', '', '', '' );
+
+    /*面包客列表*/
+    .user{
+        overflow: hidden;
+        margin-bottom: rem(20);
+        width: 100%;
+        @include background( #fff, '', '', '', '', '' );
+
+        /*面包客头像*/
+        .thumbnail{
+            overflow: visible;
+            position: relative; 
+            padding-top: rem(56);
+            padding-left: rem(48); 
+            height: rem(176);
+            font-size: 0;
+            white-space: nowrap;
+            background-image: url(#{$bgImgUrl}index/user-thumbnail@3x.png), linear-gradient(to right,#ff5f67,#fe9e6f);
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            background-size: 100% auto;
+            
+            .nickname{
+                position: absolute;
+                top: rem(180);
+                left: rem(300);
+                padding-right: rem(40);
+                color: #fff;
+                font-size: rem(36); 
+                line-height: rem(36); 
+                @include background( '', #{$bgImgUrl}index/user-fire, png, no-repeat, right bottom, rem(20) rem(32) );
+            }
+
+            .head{
+                display: inline-block;
+                vertical-align: top;
+                overflow: hidden;
+                position: relative;
+                margin: 0 rem(12);
+                border-radius: 50%;
+                padding: rem(12);
+                width: rem(80)!important;
+                height: rem(80)!important;
+                @include background( transparent, #{$bgImgUrl}index/user-head, png, no-repeat, '', 100% );
+                transform-origin: center top;
+                transition: width .35s,height .35s;
+
+                &.swiper-slide-active{
+                    /*top: rem(3); */
+                    width: rem(180)!important;
+                    height: rem(180)!important;
+                    @include background( transparent, #{$bgImgUrl}index/user-head-active, png, no-repeat, '', 100% );
+                }
+
+                .head-img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    border-radius: 50%;
+                    max-width: rem(80);
+                    max-height: rem(80);
+                    transform: translate3d(-50%,-50%,0);
+                }
+
+                &.swiper-slide-active .head-img{
+                    max-width: rem(180);
+                    max-height: rem(180);
+                }
+            }
+        }
+        
+        /*面包客内容*/
+        .content{  
+            font-size: rem(24);
+
+            .property{
+                padding: rem(70) rem(40) 0;
+                color: #333;
+                line-height: rem(40);
+
+                .icon{
+                    display: inline-block; 
+                    vertical-align: middle;
+                    margin-right: rem(16);
+                    width: rem(40);
+                    height: rem(40);  
+
+                    &:nth-of-type(1){
+                        margin-left: rem(16);
+                    }
+                    &.wealth{
+                        @include background( transparent, #{$bgImgUrl}index/user-wealth, png, no-repeat, center, 100% );
+                    }
+                    &.private{
+                        @include background( transparent, #{$bgImgUrl}index/user-private, png, no-repeat, center, 100% );
+                    }
+                    &.ent{
+                        @include background( transparent, #{$bgImgUrl}index/user-ent, png, no-repeat, center, 100% );
+                    }
+                }
+
+                em{
+                    color: #ff3e3e;
+                }
+            }
+
+            .desc{
+                padding: rem(40);
+                color: #999;
+                line-height: rem(36);
+            }
+        }
+        
+        /*查看更多*/
+        .show-more{
+            display: block;
+            margin: 0 auto;
+            width: rem(328);
+            height: rem(46);
+            color: #fff;
+            font-size: rem(24);
+            line-height: rem(46);
+            text-align: center;
+            @include background( transparent, #{$bgImgUrl}index/show-more, png, no-repeat, center, 100% );
+        }
+    }
+    
+    /*广告*/
+    .ad{
+        display: none;
+        margin-bottom: rem(20);
+        height: rem(200);
+        @include background( #fff, '', '', '', '', '' );  
+
+        img{
+            float: left;
+            margin-left: rem(56);
+            margin-right: rem(90);
+            width: rem(204);
+        }
+
+        p:nth-of-type(1){
+            padding-top: rem(66); 
+            color: #383838;
+            font-size: rem(30);
+            line-height: rem(30);
+
+            em{
+                margin-left: rem(12);
+                color: #ff553e;
+            }
+        }
+
+        p:nth-of-type(2){
+            margin-top: rem(20);
+            color: #7a7a7a;
+            font-size: rem(24);
+            line-height: rem(24);
+        }
+    }
+
+    /*产品列表*/
+    .product-list{
+
+        /*产品项*/
+        .item{
+            margin-bottom: rem(20);
+            padding-bottom: rem(20);
+            @include background( #fff, '', '', '', '', '' );  
+            
+            /*标题*/
+            h2{
+                border-bottom: rem(1) solid #eee;
+                height: rem(80);
+                font-size: rem(28);
+                line-height: rem(80);
+                text-align: center;
+
+                &:before{
+                    content: '';
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-top: rem(26);
+                    margin-right: rem(16);
+                    width: rem(28);
+                    height: rem(28);
+                }
+            }
+            
+            /*更多*/
+            .more{
+                display: inline-block;
+                float: right; 
+                margin-top: rem(-81);
+                padding-right: rem(40);
+                font-size: rem(28);
+                line-height: rem(80);
+            }
+            
+            /*内容*/
+            .content{
+                position: relative; 
+                margin: rem(64) rem(50) 0;
+                border-radius: rem(10);
+                height: rem(210);
+                color: #fff;
+
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: rem(-14);
+                    left: rem(34);
+                    right: rem(34);
+                    border-radius: rem(10) rem(10) 0 0; 
+                    height: rem(14);
+                    background-image: inherit;
+                }
+
+                /*来源*/
+                .source{
+                    overflow: hidden;
+                    position: absolute;
+                    left: 50%; 
+                    bottom: rem(0);
+                    width: rem(206);
+                    height: rem(36);
+                    text-indent: -10000px;
+                    transform: translate3d(-50%,0,0);
+                }
+            }
+        }
+        
+        /*海外旅游*/
+        .travel{
+
+            h2{
+                color: #fe826b;
+
+                &:before{
+                    @include background( '', #{$bgImgUrl}index/product-icon-travel, png, no-repeat, center, 100% );  
+                }
+            }
+
+            .more{
+                color: #fe826b;
+            }
+
+            .content{
+                box-shadow: 0 0 rem(6) rgba(255,199,156,.6);
+                background-image: linear-gradient(to right,#ff6067,#fe9e6f);
+
+                &:before{
+                    box-shadow: 0 0 rem(8) rgba(255,199,156,.6);
+                }
+                
+                .thumbnail{
+                    float: left;
+                    overflow: hidden;
+                    margin: rem(36) rem(30) 0 rem(40);
+                    padding: rem(4) rem(4) rem(7);
+                    width: rem(130);
+                    height: rem(130);
+                    @include background( '', #{$bgImgUrl}index/product-travel-thumbnail, png, no-repeat, center, 100% );  
+
+                    img{
+                        overflow: hidden;
+                        vertical-align: top;
+                        border-radius: rem(5);
+                        max-width: rem(130);
+                        max-height: rem(130);
+                    }
+                }
+
+                p:nth-of-type(1){
+                    padding-top: rem(58);
+                    line-height: 1;
+
+                    strong{
+                        font-size: rem(32);
+                    }
+
+                    span{
+                        margin-left: rem(20);
+                        border-left: rem(1) solid #ffe9de;
+                        padding-left: rem(14);
+                        font-size: rem(24);
+                    }
+
+                }
+
+                p:nth-of-type(2){
+                    margin-top: rem(23);
+                    line-height: 1;
+
+                    strong{
+                        font-size: rem(42);
+
+                        &:before{
+                            content: '¥';
+                            font-size: rem(28);
+                        }
+
+                        &:after{
+                            content: '.00';
+                            font-size: rem(28);
+                        }
+                    }
+                }
+
+                .source{
+                    @include background( '', #{$bgImgUrl}index/product-source-travel, png, no-repeat, center top, 100% auto );  
+                }
+            }
+        }
+
+        /*财富产品 私募产品*/
+        .wealth,.private{
+
+            .content{
+
+                p{
+                    display: inline-block;
+                    margin-top: rem(56);
+                    width: rem(320);
+                    font-size: rem(24);
+                    line-height: 1;
+
+                    strong{
+                        display: inline-block;
+                        margin-bottom: rem(22);
+                        font-size: rem(32); 
+                    }
+                }
+
+                p:nth-of-type(1){
+                    padding-left: rem(66);
+                    width: rem(250);
+                }
+
+                p:nth-of-type(2) strong{
+                    margin-left: rem(-14);
+                }
+            }
+            
+        }
+
+        /*财富产品*/
+        .wealth{
+
+            h2{
+                color: #fe826b;
+
+                &:before{
+                    @include background( '', #{$bgImgUrl}index/product-icon-wealth, png, no-repeat, center, 100% );  
+                }
+            }
+
+            .more{
+                color: #fe826b;
+            }
+
+            .content{
+                box-shadow: 0 0 rem(6) rgba(255,199,156,.6);
+                background-image: linear-gradient(to right,#ff6067,#fe9e6f);
+
+                &:before{
+                    box-shadow: 0 0 rem(8) rgba(255,199,156,.6);
+                }
+                
+                .source{
+                    @include background( '', #{$bgImgUrl}index/product-source-wealth, png, no-repeat, center top, 100% auto );  
+                }
+            }
+        }
+        
+        /*私募产品*/
+        .private{
+
+            h2{
+                color: #3dc0f1;
+
+                &:before{
+                    @include background( '', #{$bgImgUrl}index/product-icon-private, png, no-repeat, center, 100% );  
+                }
+            }
+
+            .more{
+                color: #3dc0f1;
+            }
+
+            .content{
+                box-shadow: 0 0 rem(8) rgba(156,242,255,.6);
+                background-image: linear-gradient(to right,#36aefa,#45d2e7);
+
+                &:before{
+                    box-shadow: 0 0 rem(8) rgba(156,212,255,.6);
+                }
+
+                .source{
+                    @include background( '', #{$bgImgUrl}index/product-source-private, png, no-repeat, center top, 100% auto );  
+                }
+            }
+        }
+    }
+
+}
+/*面包客详情*/
+.user-detail{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: rem(85) rem(30) 0;
+    height: 100%; 
+    @include background( rgba(0,0,0,.7), '', '', '', '', '' );
+
+    /*头像*/
+    .thumbnail{
+        overflow: hidden;
+        position: absolute;
+        box-shadow: 0 0 rem(20) rgba(0,0,0,.35);
+        border-radius: 50%;
+        width: rem(130);
+        height: rem(130);
+
+        img{
+            width: 100%;
+        } 
+    }
+
+    /*昵称*/
+    .nickname{
+        margin-top: rem(5);
+        margin-left: rem(148); 
+        color: #fff;
+        font-size: rem(30);
+        line-height: rem(66);
+
+        &:after{
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: rem(13);
+            width: rem(16);
+            height: rem(24);
+            @include background( '', #{$bgImgUrl}index/user-detail-fire, 'png', 'no-repeat', '', 100% );
+        }
+    }
+
+    /*关闭*/
+    .close{
+        position: absolute;
+        top: rem(108);
+        right: rem(30);
+        width: rem(24);
+        height: rem(24);
+        text-indent: -10000px;
+        @include background( '', #{$bgImgUrl}index/user-detail-close, 'png', 'no-repeat', '', 100% );
+    }
+
+    /*侧边栏*/
+    .aside{
+        float: left;
+        width: rem(88);
+
+        i{
+            display: inline-block;
+            margin-left: rem(22);
+        }
+
+        /*关注*/
+        .follow{
+            margin-top: rem(109);
+            width: rem(36);
+            height: rem(33);
+            @include background( '', #{$bgImgUrl}index/user-detail-follow, 'png', 'no-repeat', '', 100% );
+
+            &.active{
+                @include background( '', #{$bgImgUrl}index/user-detail-followed, 'png', 'no-repeat', '', 100% );
+            }
+        }
+
+        /*电话*/
+        .call{
+            margin-top: rem(50);
+            width: rem(36);
+            height: rem(36);
+            @include background( '', #{$bgImgUrl}index/user-detail-call, 'png', 'no-repeat', '', 100% );
+        }
+
+        /*分享*/
+        .share{
+            margin-top: rem(54);
+            width: rem(34);
+            height: rem(34);
+            @include background( '', #{$bgImgUrl}index/user-detail-share, 'png', 'no-repeat', '', 100% );
+        }
+    }
+
+    /*介绍*/
+    .intro{
+        float: right;
+        margin-bottom: rem(20);
+        border-radius: rem(5);
+        padding: rem(30) rem(32) rem(30) rem(58);
+        width: rem(512);
+        color: #7a7a7a;
+        font-size: rem(24);
+        line-height: rem(36);
+        @include background( #fff, '', '', '', '', '' );
+
+        /*售卖权限*/
+        .property{
+            margin-bottom: rem(20);
+            color: #333;
+            line-height: rem(40);
+
+            .icon{
+                display: inline-block; 
+                vertical-align: middle;
+                margin-right: rem(16);
+                width: rem(40);
+                height: rem(40);  
+
+                &:nth-of-type(1){
+                    margin-left: rem(16);
+                }
+                &.wealth{
+                    @include background( transparent, #{$bgImgUrl}index/user-wealth, png, no-repeat, center, 100% );
+                }
+                &.private{
+                    @include background( transparent, #{$bgImgUrl}index/user-private, png, no-repeat, center, 100% );
+                }
+                &.ent{
+                    @include background( transparent, #{$bgImgUrl}index/user-ent, png, no-repeat, center, 100% );
+                }
+            }
+        }
+
+        /*关注人数*/
+        .follows{
+            margin-top: rem(33);
+            color: #9399a1;
+            text-align: right;
+
+            &:before{
+                content: '';
+                vertical-align: middle;
+                display: inline-block;
+                margin-right: rem(20);
+                width: rem(72);
+                height: rem(1);
+                @include background( #aaafb5, '', '', '', '', '' );
+            }
+
+            em{
+                color: #ff736a;
+            }
+        } 
+    }
+
+    /*产品*/
+    .user-product{
+        float: right;
+        border-radius: rem(5);
+        width: rem(602); 
+        @include background( #fff, '', '', '', '', '' );
+    }
+}
+

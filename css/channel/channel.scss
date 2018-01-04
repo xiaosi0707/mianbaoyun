@@ -1,0 +1,30 @@
+.channel-fortune{
+  header{
+    margin-top: rem(21);
+    border-bottom: 1px #ddd solid;
+    width:100%;
+    height:rem(68);
+    line-height: rem(68);
+    text-align: center;
+    background: #fff;
+    span{
+      font-size: rem(28);
+      color: #333;
+      &:before {
+        content: '';
+        display: inline-block;
+        margin: rem(0) rem(23) rem(-6) 0;
+        width:rem(28);
+        height:rem(28);
+        background: url(../img/public/product-icon-wealth@2x.png) no-repeat center;
+        background-size: 100%;
+      }
+    }
+    em{
+      margin-left: rem(18);
+      font-size: rem(22);
+      color: #a5a19c;
+    }
+  }
+
+}

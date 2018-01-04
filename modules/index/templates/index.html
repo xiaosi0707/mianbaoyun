@@ -1,0 +1,86 @@
+<section cm-channel ></section>
+
+<section cm-channel-list ></section>
+
+<!--start index-->
+<div id="J_index" class="index" ng-controller="indexController">
+
+    <!--start user-->
+    <section id="J_user" class="user">
+        <div class="swiper-container thumbnail">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide head" data-nickname="{{agent.recommendAgentNickName}}" ng-repeat="agent in agentList">
+                    <img class="head-img" ng-src="{{agent.recommendAgentHeaderImageUrl}}" alt="{{agent.recommendAgentNickName}}">
+                </div>
+
+                <div class="swiper-slide head" data-nickname="第二个面包客">
+                    <img class="head-img" src="../../img/index/user-head.jpg" alt="">
+                </div>
+                <div class="swiper-slide head" data-nickname="第三个面包客">
+                    <img class="head-img" src="../../img/index/user-head.jpg" alt="">
+                </div>
+                <div class="swiper-slide head" data-nickname="第四个面包客">
+                    <img class="head-img" src="../../img/index/user-head.jpg" alt="">
+                </div>
+                <div class="swiper-slide head" data-nickname="第五个面包客">
+                    <img class="head-img" src="../../img/index/user-head.jpg" alt="">
+                </div>
+                <div class="swiper-slide head" data-nickname="第六个面包客">
+                    <img class="head-img" src="../../img/index/user-head.jpg" alt="">
+                </div>
+            </div>
+            <div class="nickname"></div>
+        </div>
+        <div class="content">
+            <div class="intro" ng-repeat="agent in agentList">
+                <p class="clearfix property">
+                    <span class="fl">售卖权限：<i class="icon {{businessType}}" ng-repeat="businessType in agent.recommendAgentBusinessType|businessTypeFilter"></i></span>
+                    <span class="fr"><em>{{agent.recommendAgentNumber}}</em>人已关注</span>
+                </p>
+                <p class="desc">{{agent.recommendAgentBrief}}</p>
+            </div>
+            <div class="intro">
+                <p class="clearfix property">
+                    <span class="fl">售卖权限：<i class="icon wealth"></i><i class="icon private"></i><i class="icon ent"></i></span>
+                    <span class="fr"><em>1314</em>人已关注</span>
+                </p>
+                <p class="desc">我是第二个面包客，我是第二个面包客，我是第二个面包客，我是第二个面包客，我是第二个面包客，我是第二个面包客，我是第二个面包客，我是第二个面包客，我是第二个面包客，我是第二个面包客</p>
+            </div>
+            <div class="intro">
+                <p class="clearfix property">
+                    <span class="fl">售卖权限：<i class="icon wealth"></i><i class="icon private"></i><i class="icon ent"></i></span>
+                    <span class="fr"><em>1314</em>人已关注</span>
+                </p>
+                <p class="desc">我是第三个面包客，我是第三个面包客，我是第三个面包客，我是第三个面包客，我是第三个面包客，我是第三个面包客，我是第三个面包客，我是第三个面包客，我是第三个面包客，我是第三个面包客</p>
+            </div>
+            <div class="intro">
+                <p class="clearfix property">
+                    <span class="fl">售卖权限：<i class="icon wealth"></i><i class="icon private"></i><i class="icon ent"></i></span>
+                    <span class="fr"><em>1314</em>人已关注</span>
+                </p>
+                <p class="desc">我是第四个面包客，我是第四个面包客，我是第四个面包客，我是第四个面包客，我是第四个面包客，我是第四个面包客，我是第四个面包客，我是第四个面包客，我是第四个面包客，我是第四个面包客</p>
+            </div>
+            <div class="intro">
+                <p class="clearfix property"> 
+                    <span class="fl">售卖权限：<i class="icon wealth"></i><i class="icon private"></i><i class="icon ent"></i></span>
+                    <span class="fr"><em>1314</em>人已关注</span>
+                </p>
+                <p class="desc">我是第五个面包客，我是第五个面包客，我是第五个面包客，我是第五个面包客，我是第五个面包客，我是第五个面包客，我是第五个面包客，我是第五个面包客，我是第五个面包客，我是第五个面包客</p>
+            </div>
+            <div class="intro">
+                <p class="clearfix property">
+                    <span class="fl">售卖权限：<i class="icon wealth"></i><i class="icon private"></i><i class="icon ent"></i></span>
+                    <span class="fr"><em>1314</em>人已关注</span>
+                </p>
+                <p class="desc">我是第六个面包客，我是第六个面包客，我是第六个面包客，我是第六个面包客，我是第六个面包客，我是第六个面包客，我是第六个面包客，我是第六个面包客，我是第六个面包客，我是第六个面包客</p>
+            </div>
+        </div>
+        <a class="show-more" href="javascript:;">查看更多面包客</a>
+    </section>
+    <!--end user-->
+
+    <section product-list products="productList"></section>
+
+</div>
+<!--end index-->
+

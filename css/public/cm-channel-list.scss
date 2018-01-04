@@ -1,0 +1,73 @@
+/*频道列表*/
+.cm-channel-list{
+    position: relative;
+    z-index: 10;
+    margin-top: rem(-88);
+    padding-bottom: rem(7);
+    width: 100%;
+    background-image: linear-gradient(to right,#ff5f67,#fe9e6f);
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%; 
+        transition: background .2s;
+    }
+    &.move:before{
+        z-index: 10;
+        @include background( rgba(0,0,0,.2), '', '', '', '', '' );
+    }
+
+    .arrow{
+        display: block;
+        margin-left: rem(30);
+        width: rem(64);
+        height: rem(88);
+        @include background( transparent, #{$bgImgUrl}public/channel-arrow, png, no-repeat, center rem(23), rem(34) rem(20) );
+        transform-origin: 0 rem(32);
+    }
+
+    a{
+        display: block;
+        margin: 0 rem(30) rem(16);
+        border-radius: rem(5);
+        height: rem(100);
+        color: #fff;
+        font-size: rem(32);
+        line-height: rem(100);
+        text-indent: rem(26);
+        @include background( rgba(255,255,255,.12), '', '', '', '', '' );
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        &:before{
+            content: '';
+            display: inline-block;
+            vertical-align: top;
+            margin-top: rem(25);
+            margin-right: rem(46);
+            width: rem(50);
+            height: rem(50);
+        }
+        &:nth-of-type(1):before{
+            @include background( '', #{$bgImgUrl}public/channel-finance, png, no-repeat, center, 100% );
+        }
+        &:nth-of-type(2):before{
+            @include background( '', #{$bgImgUrl}public/channel-life, png, no-repeat, center, 100% );
+        }
+        &:nth-of-type(3):before{
+            @include background( '', #{$bgImgUrl}public/channel-train, png, no-repeat, center, 100% );
+        }
+        &:nth-of-type(4):before{
+            @include background( '', #{$bgImgUrl}public/channel-ent, png, no-repeat, center, 100% );
+        }
+        &:nth-of-type(5):before{
+            @include background( '', #{$bgImgUrl}public/channel-social, png, no-repeat, center, 100% );
+        }
+    }
+}

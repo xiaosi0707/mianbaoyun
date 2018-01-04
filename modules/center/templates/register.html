@@ -1,0 +1,35 @@
+<div ng-controller="Register">
+    <!-- register-banner Start -->
+    <div class="login-banner"></div>
+    <!-- register-banner Start -->
+
+    <!-- register-form Start-->
+    <div class="J_reg login-form">
+        <form name="nForm" novalidate>
+            <ul>
+                <li class="username"><input type="tel" name="nText" placeholder="手机号" ng-model="user.mobile" required ng-maxlength="11" maxlength="11" ng-change="invalidMobile('isRegister')" reg-mobile/><span></span><i>x</i></li>
+                <li class="code"><input type="text" placeholder="图形码" name="nImgCode" ng-model="user.imgCode" required/><span></span><img src="{{imgCodeUrl}}" ng-show="imgCodeShow" ng-click="reloadImgCode('isRegister')" reg-img/></li>
+                <li class="code"><input type="text" name="nCode" placeholder="验证码" ng-model="user.smsCode" required /><span></span><button class="btn" ng-click="getCode('isRegister')" reg-code>获取验证码</button></li>
+                <li class="password">
+                    <input type="password" name="nPassword" placeholder="密码" ng-model="user.password" required minlength="6" maxlength="18" ng-change="invalidPassword()" reg-password/><span></span><i>x</i><em></em>
+                </li>
+                <li class="invalid-info">
+                    {{user.invalidInfo}}
+                </li>
+                <li class="register-agree">
+                    点击“注册”按钮，即表示您同意<a ui-sref="protocol">《面包云注册服务协议》</a>
+                </li>
+                <li class="login-btn">
+                    <button class="btn" ng-click="Register()">注册</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <!-- register-form End-->
+
+    <!-- register-footer Start-->
+    <div class="register-footer">
+        <p><a ui-sref="cx">已有账号 》</a></p>
+    </div>
+    <!-- register-footer End-->
+</div>

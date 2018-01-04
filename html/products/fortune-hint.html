@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../lib/swiper/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="../../css/app.css">
+    <title>敬请期待</title>
+</head>
+<body>
+<script>
+    document.querySelector('html').style.fontSize = (document.body.clientWidth / 375 * 16 + 'px');
+    window.addEventListener('resize', function () {
+        document.querySelector('html').style.fontSize = (document.body.clientWidth / 375 * 16 + 'px');
+    })
+</script>
+<div class="prompt">
+    <nav></nav>
+    <div class="swiper-container">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../../img/products/tip-01.png" alt="">
+                <h1>前方施工中 敬请期待...</h1>
+                <aside>财富产品请移驾pc咨询</aside>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../img/products/tip-01.png" alt="">
+                <h1>前方施工中 敬请期待...</h1>
+                <aside>世泽产品请移驾pc咨询</aside>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="../../lib/swiper/swiper-3.4.2.jquery.min.js"></script>
+<script src="../../js/products/hint.js"></script>
+<script>
+    var arrTab = ['财富', '世泽'];
+    swiperTab(arrTab);
+</script>
+</body>
+</html>

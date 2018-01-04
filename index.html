@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="cx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>面包云</title>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+<script>document.querySelector('html').style.fontSize = (document.body.clientWidth / 375 * 16 + 'px');
+window.addEventListener('resize', function () {
+    document.querySelector('html').style.fontSize = (document.body.clientWidth / 375 * 16 + 'px');
+})
+</script>
+<div ui-view></div>
+<!-- build:js -->
+<!-- endbuild -->
+</body>
+</html>

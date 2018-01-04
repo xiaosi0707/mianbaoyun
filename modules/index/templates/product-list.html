@@ -1,0 +1,66 @@
+<!--start product list-->
+<section class="product-list">
+    <div class="item wealth" ng-repeat="product in products">
+        <h2>财富产品</h2>
+        <a class="more" href="javascript:;">更多</a>
+        <div class="content">
+            <p>
+                <strong>{{product.interestRate|interestRateFilter}}</strong>%<br/>
+                <span>年化利率</span>
+            </p>
+            <p>
+                <strong>{{product.productName|productNameFilter:'0'}}</strong><br/>
+                <span>期限{{product.productName|productNameFilter:'1'}}</span>
+            </p>
+            <span class="source">汇中网</span>
+        </div>
+    </div>
+    
+    <div class="item travel">
+        <h2>海外旅游</h2>
+        <a class="more" href="javascript:;">更多</a>
+        <div class="content">
+            <div class="thumbnail">
+                <img src="../../img/index/product-travel-thumbnail.jpg" alt="澳大利亚-布利斯班|6天5晚">
+            </div>
+            <p>
+                <strong>澳大利亚-布利斯班</strong><span>6天5晚</span>
+            </p>
+            <p>
+                <strong>5289</strong>
+            </p>
+            <span class="source">汇中网</span>
+        </div>
+    </div>
+    <div class="item wealth">
+        <h2>财富产品</h2>
+        <a class="more" href="javascript:;">更多</a>
+        <div class="content">
+            <p>
+                <strong>12.00</strong>%<br/>
+                <span>年化利率</span>
+            </p>
+            <p>
+                <strong>无忧出借计划</strong><br/>
+                <span>期限24月</span>
+            </p>
+            <span class="source">汇中网</span>
+        </div>
+    </div>
+    <div class="item private">
+        <h2>世泽产品</h2>
+        <a class="more" href="javascript:;">更多</a>
+        <div class="content">
+            <p>
+                <strong>12.00</strong>%<br/>
+                <span>年化利率</span>
+            </p>
+            <p>
+                <strong>无忧出借计划</strong><br/>
+                <span>期限24月</span>
+            </p>
+            <span class="source">世泽资本</span>
+        </div>
+    </div>
+</section>
+<!--end product list-->

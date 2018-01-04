@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>忘记密码</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../css/app.css">
+</head>
+<body>
+<script>document.querySelector('html').style.fontSize = (document.body.clientWidth / 375 * 16 + 'px');
+window.addEventListener('resize', function () {
+    document.querySelector('html').style.fontSize = (document.body.clientWidth / 375 * 16 + 'px');
+})
+</script>
+<!-- login-banner Start -->
+<div class="login-banner"></div>
+<!-- login-banner End -->
+
+<!-- login-form Start-->
+<div class="login-form">
+    <ul>
+        <li class="username">
+            <input type="tel" placeholder="手机号"><i>x</i>
+        </li>
+        <li class="code">
+            <input type="text" placeholder="图形码"><img src="" alt="">
+            <span></span>
+        </li>
+        <li class="code">
+            <input type="text" placeholder="验证码"><button class="btn">获取验证码</button>
+        </li>
+        <li class="password">
+            <input type="password" placeholder="新密码"><i>x</i><em><img src="../../img/center/eyes-close@2x.png" alt=""></em>
+        </li>
+        <li class="register-agree">
+
+        </li>
+        <li class="login-btn forget-btn">
+            <button class="btn">确定</button>
+        </li>
+    </ul>
+</div>
+<!-- login-form End-->
+
+<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="../../js/center/get-code.js"></script>
+</body>
+</html>

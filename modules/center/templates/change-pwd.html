@@ -1,0 +1,24 @@
+<div ng-controller="changePwd">
+    <!-- register-banner Start -->
+    <div class="login-banner"></div>
+    <!-- register-banner Start -->
+
+    <!-- register-form Start-->
+    <div class="J_reg login-form">
+        <form name="nForm" novalidate>
+        <ul>
+            <li class="username"><input type="tel" placeholder="手机号" name="nText" ng-model="user.mobile" required ng-maxlength="11" maxlength="11" ng-change="invalidMobile('isChange')" reg-mobile/><span></span><i>x</i></li>
+            <li class="code"><input type="text" placeholder="图形码" name="nImgCode" ng-model="user.imgCode" required/><span></span><img src="{{imgCodeUrl}}" ng-show="imgCodeShow" ng-click="reloadImgCode('isChange')" reg-img/></li>
+            <li class="code"><input type="text" name="nCode" placeholder="验证码" ng-model="user.smsCode" required /><span></span><button class="btn" ng-click="getCode('isChange')" reg-code>获取验证码</button></li>
+            <li class="password">
+                <input type="password" name="nPassword" placeholder="新密码" ng-model="user.password" required minlength="6" maxlength="18" ng-change="invalidPassword()" reg-password/><span></span><i>x</i><em></em>
+            </li>
+            <li class="invalid-info">{{user.invalidInfo}}</li>
+            <li class="login-btn forget-btn">
+                <button class="btn" ng-click="changePwd()">确定</button>
+            </li>
+        </ul>
+        </form>
+    </div>
+    <!-- register-form End-->
+</div>

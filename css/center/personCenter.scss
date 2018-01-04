@@ -1,0 +1,336 @@
+/*登录表单 Start*/
+
+.login-form {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: rem(590);
+  ul {
+    li {
+      position: relative;
+      height: rem(88);
+      line-height: rem(88);
+      &.username, &.password, &.code {
+        border-bottom: 1px $borderColor solid;
+      }
+      span {
+        position: absolute;
+        top: rem(88);
+        left: rem(-590);
+        width: 100%;
+        height: 1px;
+        background: $orange;
+        &.left {
+          left: rem(-590);
+        }
+        &.right {
+          left: rem(590);
+        }
+      }
+      input {
+        border: 0;
+        border-radius: 0;
+        width: 100%;
+        height: rem(88);
+        font-size: rem(30);
+        line-height: rem(88);
+        text-indent: rem(10);
+        color: $fontColor;
+        background: none;
+      }
+      &.username {
+        i {
+          display: none;
+          top: rem(30);
+          right: rem(12);
+        }
+      }
+      &.password {
+
+        i {
+          display: none;
+          top: rem(30);
+          right: rem(92);
+        }
+        em {
+          position: absolute;
+          top: rem(15);
+          right: rem(3);
+          display: none;
+          width: rem(72);
+          height: rem(72);
+          background: url(#{$bgImgUrl}center/eyes-close@2x.png);
+          background-size: contain;
+          @media screen and (min-width: 751px) {
+            background: url(#{$bgImgUrl}center/eyes-close@3x.png);
+            background-size: contain;
+          }
+
+        }
+      }
+      &.invalid-info {
+        margin-top: rem(24);
+        height: rem(36);
+        line-height: rem(36);
+        color: #FF5656;
+
+      }
+
+      &.forget {
+        overflow: hidden;
+        margin-top: rem(11);
+        width: 100%;
+        color: $orange;
+        a {
+          float: right;
+          color: $orange;
+        }
+      }
+      &.login-btn {
+        margin-top: rem(37);
+        text-align: center;
+        button {
+          width: rem(400);
+          height: rem(88);
+        }
+      }
+      &.forget-btn {
+        margin: rem(10) 0 rem(135) 0;
+      }
+      &.code {
+        input {
+          float: left;
+          width: rem(400);
+        }
+        img {
+          margin-top: rem(14);
+          width: rem(180);
+          height: rem(60);
+        }
+        button {
+          width: rem(180);
+          height: rem(60);
+          opacity: 0;
+          @include prefix(animation, btn-show ease-out .1s .8s forwards);
+        }
+        .btnDisable {
+          border-radius: rem(90);
+          background: linear-gradient(90deg, #c3c3c3, #d0d0d0);
+          box-shadow: none;
+        }
+      }
+      &.register-agree {
+        line-height: rem(50);
+        margin-top: rem(24);
+        color: $fontColor;
+        a {
+          color: $orange;
+        }
+      }
+
+      i {
+        position: absolute;
+        display: inline-block;
+        border-radius: 50%;
+        width: rem(36);
+        height: rem(36);
+        line-height: rem(36);
+        text-align: center;
+        background: #cdced4;
+        color: white;
+      }
+
+    }
+  }
+}
+.arc{
+  width: rem(57);
+  height: rem(88);
+  border: 1px #f88f70 solid;
+  border-left: 0;
+  border-radius: 0 40px 40px 0;
+  position: absolute;
+  top: rem(663);
+  right: rem(24);
+  opacity: 1;
+}
+.mask {
+  width: rem(87);
+  height: rem(99);
+  background: white;
+  position: absolute;
+  top: rem(663);
+  right: rem(0);
+  opacity: 1;
+  &.mask-top {
+    top: rem(572);
+  }
+  &.mask-bot {
+    top: rem(751);
+  }
+}
+
+
+.form-yzm {
+  border-bottom: 2px $orange solid;
+  input {
+    float: left;
+    width: rem(400);
+  }
+
+  button {
+    width: rem(180);
+    height: rem(60);
+  }
+
+}
+
+/*登录表单 End*/
+
+/*登录底部 Start*/
+.login-footer {
+  margin: rem(96) 0 rem(49) 0;
+  dl {
+    margin: 0 auto;
+    width: rem(590);
+    dt {
+      //float: left;
+      text-align: center;
+      span {
+        color: $fontColor;
+      }
+      a {
+        color: $orange;
+      }
+    }
+    /*
+    dd {
+      float: right;
+      a {
+        color: $orange;
+      }
+    }*/
+  }
+}
+
+/*登录底部 End*/
+
+/*注册底部 Start*/
+.register-footer {
+  margin: rem(33) 0 rem(51) 0;
+  text-align: center;
+  a {
+    font-size: rem(28);
+    color: $orange;
+  }
+}
+
+/*注册底部 End*/
+
+/*注册成功 Start*/
+.reg-success {
+  dl {
+    dt {
+      margin: rem(200) 0 0 rem(265);
+      width: rem(230);
+      height: rem(230);
+      background: url(#{$bgImgUrl}center/icon-right@2x.png);
+      background-size: contain;
+      @media screen and (min-width: 751px) {
+        background: url(#{$bgImgUrl}center/icon-right@3x.png);
+        background-size: contain;
+      }
+    }
+    dd {
+      margin-top: rem(54);
+      text-align: center;
+      span {
+        font-size: rem(36);
+        color: #354356;
+      }
+      aside {
+        margin-top: rem(24);
+        font-size: rem(28);
+        color: #798ba1;
+      }
+
+    }
+  }
+  p {
+    margin-top: rem(128);
+    text-align: center;
+    button {
+      display: inline-block;
+      width: rem(400);
+      height: rem(88);
+    }
+  }
+  footer {
+    margin: rem(302) 0 rem(60) rem(297);
+    width: rem(160);
+    height: rem(42);
+    background: url(#{$bgImgUrl}center/logo@2x.png);
+    background-size: contain;
+    @media screen and (min-width: 751px) {
+      background: url(#{$bgImgUrl}center/logo@3x.png);
+      background-size: contain;
+    }
+
+  }
+
+}
+
+/*注册成功 End*/
+
+/*注册协议 Start*/
+.protocol {
+  margin: 0 auto;
+  width: rem(720);
+  color: $fontColor;
+  h1 {
+    margin: rem(36) 0;
+    font-size: rem(42);
+    text-align: center;
+  }
+  h2 {
+    font-size: rem(30);
+  }
+  p {
+    margin-top: rem(24);
+    line-height: rem(50);
+    text-indent: rem(24);
+    font-size: rem(24);
+  }
+  .underline {
+    text-decoration: underline;
+  }
+}
+
+/*注册协议 End*/
+
+
+/*倒计时按钮 Start*/
+@mixin btn-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes btn-show {
+  @include btn-show;
+}
+
+@-moz-keyframes btn-show {
+  @include btn-show;
+}
+
+@-ms-keyframes btn-show {
+  @include btn-show;
+}
+
+@keyframes btn-show {
+  @include btn-show;
+}
+/*倒计时按钮 Start*/

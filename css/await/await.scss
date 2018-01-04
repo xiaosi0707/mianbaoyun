@@ -1,0 +1,118 @@
+.prompt {
+  overflow: hidden;
+  min-height: 100%;
+  background: $bgColor;
+  nav{
+    position: absolute;
+    top:rem(26);
+    left:rem(30);
+    z-index: 100;
+    width:rem(21);
+    height: rem(36);
+    background: url(#{$bgImgUrl}public/back.png) no-repeat;
+    background-size: contain;
+  }
+  .swiper-pagination{
+    position:static;
+    height:rem(89);
+    line-height: rem(89);
+    background: #fff;
+    border-bottom: 1px #ddd solid;
+  }
+  .swiper-pagination-bullet{
+    display: inline-block;
+    opacity: 1;
+    border-radius: inherit;
+    font-size: rem(36);
+    width:auto;
+    height: auto;
+    background: none;
+    color: #343535;
+  }
+  .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 rem(69);
+  }
+  .swiper-pagination-bullet-active{
+    border-bottom: 2px #ff726b solid;
+    color: #ff726b;
+  }
+  .swiper-slide{
+    text-align: center;
+    h1{
+      margin-top: rem(69);
+      font-size: rem(36);
+      color: #343535;
+    }
+
+    img{
+      margin-top: rem(180);
+      width:rem(542);
+      height:rem(300);
+    }
+    aside{
+      margin-top: rem(23);
+      font-size: rem(30);
+      color: #bababa;
+    }
+    section{
+      margin: rem(62) auto 0;
+      width:rem(690);
+      height:rem(344);
+      background: white;
+      p{
+        margin: 0 auto;
+        width:rem(642);
+        height:rem(64);
+        line-height: rem(64);
+        span{
+          float: left;
+          font-size: rem(28);
+          color: #343535;
+        }
+        em{
+          float: right;
+          font-size: rem(22);
+          color: #656460;
+          &:before{
+            content: '';
+            display: inline-block;
+            margin-right: rem(8);
+            width:rem(17);
+            height:rem(17);
+            background: url(#{$bgImgUrl}public/phone.png) no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+      img{
+        margin-top: 0;
+        width:rem(690);
+        height:rem(230);
+      }
+      a{
+        img{
+          margin-top: rem(6);
+          width:rem(206);
+          height:rem(40);
+        }
+      }
+    }
+   &.public{
+     h1{
+       margin: rem(61) auto 0;
+       border:1px #dad9da solid;
+       border-radius: rem(100);
+       width:rem(271);
+       height:rem(54);
+       line-height:rem(54);
+       font-size: rem(28);
+       color: #c0bbb5;
+     }
+     aside{
+       margin-top: rem(26);
+       color: #343535;
+     }
+    }
+  }
+
+}

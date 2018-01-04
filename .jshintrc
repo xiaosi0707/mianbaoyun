@@ -1,0 +1,12 @@
+//js检测规则
+{
+  "browserify": true,
+  "devel": true,
+  "indent": 4,
+  // "strict": true,
+  "loopfunc": true,
+  "camelcase": true,
+  "browser": true,
+  "browserify": true,
+  "predef": ["angular", "Swiper", "Hammer", "_hmt", "tbridge"]
+}

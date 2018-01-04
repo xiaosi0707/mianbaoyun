@@ -1,0 +1,25 @@
+@import 'public/function';   			//	SASS函数
+@import 'public/mixin';   				//	SASS混合宏
+
+@import 'public/animate';  				//	CSS动画
+
+/*通用*/
+@import 'public/reset';   				//	默认样式重置
+@import 'public/public';  				//	类名、元件
+
+/*公共模块*/
+@import 'public/cm-channel';  			//	频道
+@import 'public/cm-channel-list';  		//	频道列表
+
+/*业务模块*/
+@import 'index/index';    				//	首页
+@import 'center/personCenter'; 			//	登录
+@import 'await/await'; 					//	提示页(敬请期待)
+@import 'channel/channel';              //  频道页
+
+
+
+
+
+
+

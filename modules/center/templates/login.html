@@ -1,0 +1,38 @@
+<div ng-controller="Login">
+    <!-- personCenterogin-banner Start -->
+    <div class="login-banner"></div>
+    <!-- personCenterogin-banner Start -->
+
+    <!-- personCenterogin-form Start-->
+    <div class="login-form">
+        <form name="nForm" novalidate>
+            <ul>
+                <li class="username">
+                    <input type="tel" name="nText" placeholder="手机号" ng-model="user.mobile" required ng-maxlength="11" maxlength="11" ng-change="invalidMobile()" reg-mobile /><i>x</i>
+                </li>
+                <li class="password">
+                    <input type="password" name="nPassword" placeholder="密码" ng-model="user.passWord" required maxlength="18" /><i>x</i><em></em>
+                </li>
+                <li class="forget">
+                    <span class="invalid-info">{{user.invalidInfo}}</span>
+                    <a ui-sref="changePwd">忘记密码？</a>
+                </li>
+
+                <li class="login-btn">
+                    <button class="btn" ng-click="login()">登录</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <!-- personCenterogin-form End-->
+
+    <!-- personCenterogin-footer Start-->
+    <div class="login-footer">
+        <dl>
+            <dt>
+                <span>还没有账号？<a ui-sref="register">注册</a></span>
+            </dt>
+        </dl>
+    </div>
+    <!-- personCenterogin-footer End-->
+</div>

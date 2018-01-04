@@ -1,0 +1,4 @@
+/*px转换rem*/
+@function rem($px) {
+    @return $px / 32 + rem;
+}

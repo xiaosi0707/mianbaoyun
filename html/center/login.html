@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>登录</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../css/app.css">
+</head>
+<body>
+<script>document.querySelector('html').style.fontSize = (document.body.clientWidth / 375 * 16 + 'px');
+window.addEventListener('resize', function () {
+    document.querySelector('html').style.fontSize = (document.body.clientWidth / 375 * 16 + 'px');
+})
+</script>
+<!-- login-banner Start -->
+<div class="login-banner"></div>
+<!-- login-banner End -->
+
+<!-- login-form Start-->
+<div class="J_login login-form">
+    <ul>
+        <li class="username">
+            <input type="tel" placeholder="手机号" class="J_username" data-flag="false"><span></span><i>x</i>
+        </li>
+        <li class="password">
+            <input type="password" placeholder="密码" class="J_password" data-flag="false"><span></span><i>x</i><em></em>
+        </li>
+        <li class="forget">
+            <a href="">忘记密码？</a>
+        </li>
+        <li class="login-btn">
+            <button class="btn">登录</button>
+        </li>
+    </ul>
+
+</div>
+<!-- login-form End-->
+
+<!-- arc Start-->
+<div class="J_arc arc"></div>
+<!-- arc End-->
+
+<!-- mask Start-->
+<div class="J_mask mask"></div>
+<!-- mask End-->
+
+<!-- login-footer Start-->
+<div class="login-footer">
+    <dl>
+        <dt>
+            <span>还没有账号？<a href="">注册</a></span>
+        </dt>
+        <dd>
+            <!-- <a href="">随便看看</a> -->
+        </dd>
+    </dl>
+</div>
+<!-- login-footer End-->
+<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="../../js/center/clear-input.js"></script>
+<script src="../../js/center/login-effect.js"></script>
+</body>
+</html>
