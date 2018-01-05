@@ -1,6 +1,6 @@
 {
   "config": {
-    "api": "http://dlr.ixsh.net/wap/",
-    "wxApi": "http://dlr.ixsh.net/mobile/"
+    "api": "测试API",
+    "wxApi": "测试API"
   }
 }
