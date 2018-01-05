@@ -1,6 +1,6 @@
 {
   "config": {
-    "api": "https://www.mianbaoyun.cn/mobile/",
-    "wxApi": "https://www.mianbaoyun.cn/mobile/"
+    "api": "自己的API",
+    "wxApi": "自己的API"
   }
 }
